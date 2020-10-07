@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Summary</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+<body>
+ <div class="login">
+     <h1>Summarize</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('summarize')}}"method="POST">
+     <textarea id="styled" name="message" rows="6" cols="50" placeholder="Enter Your Article Here" required="required" ></textarea>
+     <button type="submit" class="btn btn-primary btn-block btn-large">Summarize</button>
+    </form>
+   <br>
+   <br>
+   {{ summarized_text }}
+</div>
+</body>
+</html>
