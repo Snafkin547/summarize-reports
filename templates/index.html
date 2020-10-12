@@ -16,9 +16,19 @@
     </form>
    <br>
    <br>
+   <p style="color:blue">
+   {{TextA}}
+   <br>
    {% for para in summarized_text %}
-      <p> {{para}}</p>
+   <p> {{para}}</p>
    {% endfor %}
+
+   <br>
+   <p style="color:blue">
+   {{TextB}}
+   <br>
+
+   {{original_text}}
 </div>
 </body>
 </html>

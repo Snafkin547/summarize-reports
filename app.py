@@ -15,7 +15,7 @@ def summarize():
    if request.method=='POST':
       message=request.form['message']
       output=generate_summary(message, 3)
-      return render_template('index.html', summarized_text=output)
+      return render_template('index.html', summarized_text=output, original_text=message, TextA="Here's your summary", TextB="Original text" )
    else:
       return redirect('/')
 
