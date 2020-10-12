@@ -16,7 +16,9 @@
     </form>
    <br>
    <br>
-   {{ summarized_text }}
+   {% for para in summarized_text %}
+      <p> {{para}}</p>
+   {% endfor %}
 </div>
 </body>
 </html>
