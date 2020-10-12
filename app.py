@@ -1,11 +1,9 @@
 from flask import Flask, request, render_template, redirect
-#from flask_ngrok import run_with_ngrok
 
 from summarize import generate_summary
 
 #Create the flask object
 app = Flask(__name__)
-#run_with_ngrok(app)
 
 #create route
 @app.route('/')
