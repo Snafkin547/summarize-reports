@@ -12,9 +12,11 @@ def home():
 
 @app.route('/summarize', methods=['POST'])
 def summarize():
+   selectedValue = request.form.get('numbers_of_lines')
    if request.method=='POST':
       message=request.form['message']
-      output=generate_summary(message, 3)
+      output= generate_summary(message, top_n=int(selectedValue))
+      # output= generate_summary(message, top_n=3)
       return render_template('index.html', summarized_text=output, original_text=message, TextA="Here's your summary", TextB="Original text" )
    else:
       return redirect('/')
